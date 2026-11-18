@@ -23,6 +23,12 @@
     .break{background:var(--red);color:var(--paper);padding:95px max(30px,calc((100vw - 1500px)/2));display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;overflow:hidden}.break h2{font-size:clamp(52px,6vw,90px);letter-spacing:-.02em;line-height:1.05;margin:0}.break p{font-size:18px;line-height:1.55;max-width:480px}.ink-stack{height:350px;position:relative}.ink-stack span{position:absolute;display:block;font-size:260px;font-weight:900;line-height:1;letter-spacing:-.13em;color:#263995;mix-blend-mode:multiply}.ink-stack span:first-child{left:10%;top:5%;transform:rotate(-12deg)}.ink-stack span:last-child{left:31%;top:17%;color:#f3dc9e;transform:rotate(13deg)}
     footer{background:#203485;color:#f3f0e5;padding:110px max(30px,calc((100vw - 1500px)/2)) 30px}footer h2{font-size:clamp(57px,8.5vw,130px);line-height:.98;letter-spacing:-.02em;margin:0 0 40px}footer p{max-width:600px;line-height:1.65;color:#d7d9ec}footer .hero-link{background:var(--paper);color:var(--blue);margin:25px 0 130px}.footer-line{display:flex;justify-content:space-between;gap:25px;border-top:1px solid #7783bb;padding-top:26px;font-size:12px;color:#d6daed}.footer-line a{text-decoration:none}
     dialog{border:0;padding:0;max-width:min(760px,90vw);max-height:90vh;background:var(--paper);box-shadow:0 20px 80px #12183688;color:var(--ink)}dialog::backdrop{background:#141b3ac9}.dialog-body{display:grid;grid-template-columns:1fr 1fr;min-height:450px}.dialog-art{position:relative;background:#e0dccb;display:grid;place-items:center;padding:35px}.dialog-art svg{display:block;width:100%;max-height:64vh;box-shadow:8px 9px 0 #aaa697}.dialog-copy{padding:45px 35px;display:flex;flex-direction:column}.dialog-copy h2{font-size:39px;line-height:1;letter-spacing:-.06em;color:var(--blue);margin:50px 0 15px}.dialog-copy p{line-height:1.5}.dialog-copy small{margin-top:auto;color:#6d6e65}.dialog-close{align-self:flex-end;border:2px solid var(--blue);width:40px;height:40px;background:transparent;color:var(--blue);font-size:24px;line-height:1}
+    .gallery-count{margin:0 0 24px;color:#5a5b54;font-size:13px;font-weight:600}
+    .poster-grid:has(.poster-card[hidden]){grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),400px))}
+    .poster-card:not([hidden]):first-of-type{padding-top:0}
+    .dialog-art{min-width:0;align-self:stretch}.dialog-copy{min-width:0}.dialog-copy h2{text-wrap:balance}.dialog-copy small{display:block;margin-top:24px}
+    .dialog-pagination{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:30px;border-top:1px solid #c6c2b5}.dialog-pagination button{border:1.5px solid var(--blue);background:transparent;color:var(--blue);width:43px;height:43px;font-size:21px}.dialog-pagination button:hover:not(:disabled){background:var(--blue);color:white}.dialog-pagination button:disabled{opacity:.3;cursor:not-allowed}.dialog-pagination span{margin-right:auto;color:#595a51;font-size:13px;font-weight:700}
+    @media(max-width:650px){.poster-grid:has(.poster-card[hidden]){grid-template-columns:1fr}.dialog-pagination{margin-top:24px}.dialog-copy small{margin-top:18px}.dialog-art{padding:20px}.dialog-art svg{max-height:34vh}}
     @media(max-width:950px){.hero{min-height:650px}.hero h1{font-size:clamp(72px,10vw,110px)}.hero-art::after{display:none}.intro{grid-template-columns:1fr;gap:25px}.method-heading{grid-template-columns:1fr;gap:30px}.break{gap:20px}.poster-info h3{font-size:21px}}
     @media(max-width:650px){.head{padding:20px}.logo{font-size:36px}.head nav{gap:14px;font-size:12px}.head nav a:nth-child(2){display:none}.hero{display:flex;flex-direction:column;min-height:0;padding:30px 22px 55px}.hero-copy{padding-top:5px}.hero-kicker{font-size:12px}.hero h1{font-size:clamp(64px,17.2vw,102px);margin:33px 0 20px}.hero h1 span{margin-left:30px}.hero p{font-size:17px}.hero-aside{display:none}.hero-art{margin-top:45px;min-height:475px}.hero-poster{width:75%;max-width:330px}.hero-art::before{width:65%;height:83%}.hero-sticker{width:85px;height:85px;font-size:10px;right:0}.ticker-track{justify-content:flex-start;padding-left:15px}.intro{padding:85px 22px 75px}.intro h2{font-size:clamp(40px,12vw,49px)}.intro p{font-size:16px}.gallery{padding:75px 22px 95px}.gallery-head{align-items:start;flex-direction:column;gap:18px}.gallery h2,.method h2{font-size:58px}.poster-grid{grid-template-columns:1fr;gap:48px}.poster-card:nth-child(2),.poster-card:nth-child(3){padding-top:0}.poster-preview svg{max-width:480px;margin:auto}.poster-info{max-width:480px;margin:23px auto 0}.method{padding:90px 22px 100px}.method-grid{grid-template-columns:1fr;gap:42px;margin-top:50px}.method-card .symbol{height:70px;font-size:56px}.break{padding:75px 22px;display:block}.break h2{font-size:58px}.ink-stack{height:210px}.ink-stack span{font-size:155px}footer{padding:90px 22px 30px}footer h2{font-size:69px}footer .hero-link{margin-bottom:90px}.footer-line{flex-direction:column;gap:10px}.dialog-body{grid-template-columns:1fr}.dialog-art{padding:25px}.dialog-art svg{max-height:40vh;width:auto}.dialog-copy{padding:20px 28px 32px}.dialog-copy h2{margin:10px 0;font-size:34px}.dialog-copy small{margin-top:20px}}
     @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
@@ -41,6 +47,7 @@
     <section class="intro" aria-labelledby="intro-title"><div class="section-note">О мастерской</div><div><h2 id="intro-title">Печать, в которой <span class="offset">случайность</span> становится деталью.</h2><p>Ризография кладёт цвет за цветом. Иногда они встречаются точно, иногда немного расходятся. Отсюда фактура, которую хочется рассматривать вблизи.</p></div></section>
     <section class="gallery" id="works" aria-labelledby="works-title"><div class="gallery-head"><h2 id="works-title">Постеры</h2><p>Три авторские композиции, созданные для этого демонстрационного проекта. Нажмите на лист, чтобы рассмотреть его крупнее.</p></div>
       <div class="filters" role="group" aria-label="Фильтр постеров"><button type="button" data-filter="all" aria-pressed="true">Все</button><button type="button" data-filter="shape" aria-pressed="false">Форма</button><button type="button" data-filter="type" aria-pressed="false">Типографика</button></div>
+      <p class="gallery-count" id="gallery-count" aria-live="polite">Показаны все 3 постера</p>
       <div class="poster-grid">
         <article class="poster-card" data-category="shape" data-title="После дождя" data-description="Два наложенных цвета и линии, похожие на отражения в мокром городе."><button class="poster-preview" type="button" aria-label="Открыть постер «После дождя»"><svg viewBox="0 0 420 550" role="img" aria-label="Абстрактный постер с синими арками и красным кругом"><rect width="420" height="550" fill="#eee9d9"/><rect x="42" y="45" width="335" height="462" fill="#28509c"/><circle cx="253" cy="232" r="124" fill="#e85840" style="mix-blend-mode:multiply"/><path d="M79 355V208a127 127 0 0 1 254 0v147" fill="none" stroke="#eee9d9" stroke-width="28"/><path d="M89 395c65-36 110-36 163 0s73 39 120 0M69 441c65-36 110-36 163 0s73 39 120 0" fill="none" stroke="#eee9d9" stroke-width="13"/><text x="54" y="492" fill="#eee9d9" font-family="Arial" font-size="28" font-weight="900">ПОСЛЕ ДОЖДЯ</text></svg></button><div class="poster-info"><div><h3>После дождя</h3><span>Форма · два цвета</span></div><span class="poster-open" aria-hidden="true">+</span></div></article>
         <article class="poster-card" data-category="type" data-title="Здесь и сейчас" data-description="Крупные буквы превращаются в ритм; смещение слоёв делает текст похожим на отпечаток в движении."><button class="poster-preview" type="button" aria-label="Открыть постер «Здесь и сейчас»"><svg viewBox="0 0 420 550" role="img" aria-label="Типографический постер с большими синими и красными буквами"><rect width="420" height="550" fill="#e8dec8"/><text x="25" y="175" font-family="Arial" font-size="121" font-weight="900" letter-spacing="-10" fill="#d84730">ЗДЕСЬ</text><text x="20" y="184" font-family="Arial" font-size="121" font-weight="900" letter-spacing="-10" fill="#2b4598" style="mix-blend-mode:multiply">ЗДЕСЬ</text><rect x="25" y="219" width="368" height="13" fill="#243c9c"/><text x="25" y="392" font-family="Arial" font-size="97" font-weight="900" letter-spacing="-8" fill="#df4d33">СЕЙЧАС</text><text x="19" y="400" font-family="Arial" font-size="97" font-weight="900" letter-spacing="-8" fill="#2d4797" style="mix-blend-mode:multiply">СЕЙЧАС</text><circle cx="86" cy="477" r="29" fill="#df4d33"/><circle cx="157" cy="477" r="29" fill="#2d4797"/><circle cx="228" cy="477" r="29" fill="#df4d33"/><path d="M283 477h108" stroke="#2d4797" stroke-width="15"/></svg></button><div class="poster-info"><div><h3>Здесь и сейчас</h3><span>Типографика · два цвета</span></div><span class="poster-open" aria-hidden="true">+</span></div></article>
@@ -51,9 +58,49 @@
     <section class="break" aria-labelledby="break-title"><div><h2 id="break-title">Сдвиг в пару миллиметров. Целый новый рисунок.</h2><p>Физическая печать оставляет небольшие отклонения. В этом проекте они стали основой визуального языка.</p></div><div class="ink-stack" aria-hidden="true"><span>Р</span><span>Р</span></div></section>
   </main>
   <footer id="about"><h2>Бумага.<br>Краска.<br>След.</h2><p>«РИСО» — вымышленная мастерская и авторский демонстрационный проект. Здесь можно оценить дизайн, адаптивную вёрстку и интерактивную галерею. Настоящие заказы через этот сайт не принимаются.</p><a class="hero-link" href="#works">Снова к постерам <span aria-hidden="true">+</span></a><div class="footer-line"><span>РИСО / демонстрационный концепт</span><span>Дизайн и разработка: levvxff</span><a href="#top">Наверх</a></div></footer>
-  <dialog id="poster-dialog" aria-labelledby="dialog-title"><div class="dialog-body"><div class="dialog-art" id="dialog-art"></div><div class="dialog-copy"><button class="dialog-close" type="button" aria-label="Закрыть постер">×</button><h2 id="dialog-title"></h2><p id="dialog-description"></p><small>Авторский постер для демонстрационного сайта.</small></div></div></dialog>
+  <dialog id="poster-dialog" aria-labelledby="dialog-title"><div class="dialog-body"><div class="dialog-art" id="dialog-art"></div><div class="dialog-copy"><button class="dialog-close" type="button" aria-label="Закрыть постер">×</button><h2 id="dialog-title"></h2><p id="dialog-description"></p><small>Авторская иллюстрация для демонстрационного проекта.</small><div class="dialog-pagination" aria-label="Навигация по постерам"><span id="dialog-position" aria-live="polite"></span><button type="button" class="dialog-prev" aria-label="Предыдущий постер">←</button><button type="button" class="dialog-next" aria-label="Следующий постер">→</button></div></div></div></dialog>
   <script>
-    (()=>{const filters=[...document.querySelectorAll('[data-filter]')],cards=[...document.querySelectorAll('.poster-card')];filters.forEach(button=>button.addEventListener('click',()=>{const filter=button.dataset.filter;filters.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));cards.forEach(card=>card.hidden=filter!=='all'&&card.dataset.category!==filter)}));const dialog=document.getElementById('poster-dialog'),dialogArt=document.getElementById('dialog-art'),dialogTitle=document.getElementById('dialog-title'),dialogDescription=document.getElementById('dialog-description'),close=dialog.querySelector('.dialog-close');cards.forEach(card=>card.querySelector('.poster-preview').addEventListener('click',()=>{dialogArt.replaceChildren(card.querySelector('svg').cloneNode(true));dialogTitle.textContent=card.dataset.title;dialogDescription.textContent=card.dataset.description;dialog.showModal();close.focus()}));close.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()})})();
+    (() => {
+      const filters = [...document.querySelectorAll('[data-filter]')];
+      const cards = [...document.querySelectorAll('.poster-card')];
+      const count = document.getElementById('gallery-count');
+      const dialog = document.getElementById('poster-dialog');
+      const art = document.getElementById('dialog-art');
+      const title = document.getElementById('dialog-title');
+      const description = document.getElementById('dialog-description');
+      const position = document.getElementById('dialog-position');
+      const close = dialog.querySelector('.dialog-close');
+      let active = 0;
+      let opener = null;
+      const visibleCards = () => cards.filter(card => !card.hidden);
+      function showPoster(index) {
+        const visible = visibleCards();
+        active = (index + visible.length) % visible.length;
+        const card = visible[active];
+        art.replaceChildren(card.querySelector('svg').cloneNode(true));
+        title.textContent = card.dataset.title;
+        description.textContent = card.dataset.description;
+        position.textContent = `${active + 1} / ${visible.length}`;
+        dialog.querySelectorAll('.dialog-prev,.dialog-next').forEach(button => button.disabled = visible.length < 2);
+      }
+      filters.forEach(button => button.addEventListener('click', () => {
+        filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        cards.forEach(card => card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter);
+        const n = visibleCards().length;
+        count.textContent = n === 1 ? 'Показан 1 постер' : `Показано ${n} постера`;
+      }));
+      cards.forEach(card => card.querySelector('.poster-preview').addEventListener('click', event => {
+        opener = event.currentTarget;
+        showPoster(visibleCards().indexOf(card));
+        dialog.showModal();
+        close.focus();
+      }));
+      dialog.querySelector('.dialog-prev').addEventListener('click', () => showPoster(active - 1));
+      dialog.querySelector('.dialog-next').addEventListener('click', () => showPoster(active + 1));
+      close.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', () => { if (opener && opener.isConnected && !opener.closest('[hidden]')) opener.focus(); });
+    })();
   </script>
 </body>
 </html>
