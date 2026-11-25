@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru" data-type="product">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151613">
+  <meta name="description" content="Демонстрационный сайт проката кинотехники с подбором комплекта и расчётом аренды.">
+  <meta name="page-type" content="product">
+  <meta name="site-kind" content="tech">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+  <link rel="stylesheet" href="styles.css">
+  <script src="kit.js" defer></script>
+  <title>КАДР 24 — прокат кинотехники</title>
+</head>
+<body>
+  <a class="skip" href="#main">К содержимому</a>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="mark" href="#main" aria-label="Кадр 24, на главную">КАДР<span>24</span></a>
+      <nav aria-label="Навигация">
+        <a href="#kits">Комплекты</a>
+        <a href="#rental">Условия</a>
+      </nav>
+      <a class="back" href="../../">Портфолио <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-picture">
+        <source media="(max-width: 680px)" srcset="hero-mobile.webp">
+        <img src="hero.webp" alt="Киносъёмочная камера с компендиумом и монитором на столе подготовки" width="1536" height="1024" fetchpriority="high">
+      </picture>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="label">Демонстрационный проект</p>
+          <h1 id="hero-title">Кинотехника<br>на смену<span>.</span></h1>
+          <p class="intro">Комплекты для интервью, съёмки в движении и работы с двумя камерами. Соберите свой и сразу посчитайте аренду.</p>
+          <a class="button primary" href="#kits">Собрать комплект <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="builder wrap" id="kits" aria-labelledby="kit-title">
+      <header class="section-head">
+        <h2 id="kit-title">Комплекты</h2>
+        <p>Выберите технику и число смен. Расчёт можно скопировать для продюсера.</p>
+      </header>
+      <a class="quote-jump" href="#quote">К расчёту <strong id="jump-total">4 200 ₽</strong><span aria-hidden="true">↓</span></a>
+      <noscript><p class="noscript-note">Для расчёта стоимости включите JavaScript.</p></noscript>
+      <form id="kit-form">
+        <div class="builder-layout">
+          <div class="kit-inputs">
+            <fieldset class="kits">
+              <legend class="visually-hidden">Комплект камеры</legend>
+              <label class="kit-card">
+                <img src="kit-compact.webp" alt="" width="512" height="640" loading="lazy" decoding="async">
+                <input type="radio" name="kit" value="4200" data-title="Компакт" checked>
+                <span class="kit-copy"><strong>Компакт</strong><small>Камера, зум и две батареи</small><span class="daily">4 200 ₽ / смена</span></span>
+              </label>
+              <label class="kit-card">
+                <img src="kit-studio.webp" alt="" width="512" height="640" loading="lazy" decoding="async">
+                <input type="radio" name="kit" value="7200" data-title="Постановка">
+                <span class="kit-copy"><strong>Постановка</strong><small>Камера, два фикса и монитор</small><span class="daily">7 200 ₽ / смена</span></span>
+              </label>
+              <label class="kit-card">
+                <img src="kit-interview.webp" alt="" width="512" height="640" loading="lazy" decoding="async">
+                <input type="radio" name="kit" value="9800" data-title="Две камеры">
+                <span class="kit-copy"><strong>Две камеры</strong><small>Две камеры, объективы и штативы</small><span class="daily">9 800 ₽ / смена</span></span>
+              </label>
+            </fieldset>
+            <fieldset class="extras">
+              <legend>Дополнить комплект</legend>
+              <label><input type="checkbox" name="extra" value="1500" data-title="Свет"> <span>Мягкий свет</span><span>+1 500 ₽</span></label>
+              <label><input type="checkbox" name="extra" value="1200" data-title="Радиопетлички"> <span>Две радиопетлички</span><span>+1 200 ₽</span></label>
+              <label><input type="checkbox" name="extra" value="1800" data-title="Стабилизатор"> <span>Стабилизатор</span><span>+1 800 ₽</span></label>
+            </fieldset>
+          </div>
+          <aside class="quote" id="quote" tabindex="-1" aria-labelledby="quote-title">
+            <h3 id="quote-title">Расчёт аренды</h3>
+            <label class="duration" for="shifts">Смены
+              <select id="shifts" name="shifts">
+                <option value="1">1 смена</option><option value="2">2 смены</option>
+                <option value="3">3 смены</option><option value="4">4 смены</option>
+                <option value="5">5 смен</option><option value="6">6 смен</option><option value="7">7 смен</option>
+              </select>
+            </label>
+            <ul class="quote-lines" id="quote-lines"><li><span>Компакт</span><span>4 200 ₽</span></li></ul>
+            <div class="total"><span>Итого</span><output id="total" for="shifts" aria-live="polite">4 200 ₽</output></div>
+            <button class="button primary" type="button" id="copy-kit">Скопировать смету <span aria-hidden="true">↗</span></button>
+            <p class="feedback" id="copy-status" role="status"></p>
+            <p class="note">Демонстрационные цены. Дополнения рассчитаны за смену.</p>
+          </aside>
+        </div>
+      </form>
+    </section>
+
+    <section class="rental" id="rental" aria-labelledby="rental-title">
+      <div class="wrap rental-inner">
+        <h2 id="rental-title">Что входит в смену</h2>
+        <dl>
+          <div><dt>24 часа</dt><dd>Смена считается от выдачи до возврата комплекта.</dd></div>
+          <div><dt>Проверка перед выдачей</dt><dd>Сверяем комплект, заряд и состояние техники.</dd></div>
+          <div><dt>Состав в смете</dt><dd>Комплект, модули и число смен остаются в скопированном тексте.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>КАДР 24 · концепт Льва</span><a href="../../">Все проекты <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
