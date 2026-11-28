@@ -11,7 +11,7 @@
         integration?.checked ? 'Ещё хочу обсудить подключение внешнего сервиса.' : '',
         'Коротко о задаче: ',
       ].filter(Boolean).join('\n');
-      contact.href = 'https://t.me/levvxff?text=' + encodeURIComponent(draft);
+      contact.href = `https://t.me/levvxff?text=${encodeURIComponent(draft)}`;
     }
 
     updateDraft();
@@ -20,4 +20,15 @@
       extra.hidden = false;
     }
   });
+
+  function openLinkedPrice() {
+    const item = document.getElementById(location.hash.slice(1));
+    if (item?.classList.contains('price-item')) {
+      item.open = true;
+      item.scrollIntoView({ block: 'start' });
+    }
+  }
+
+  openLinkedPrice();
+  window.addEventListener('hashchange', openLinkedPrice);
 })();

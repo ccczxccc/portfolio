@@ -1,6 +1,7 @@
 const log = document.querySelector('#bot-log');
 const choices = document.querySelector('#bot-choices');
 const reset = document.querySelector('#bot-reset');
+choices.hidden = false;
 const greeting = log.firstElementChild.textContent;
 const startText = choices.firstElementChild.textContent;
 
